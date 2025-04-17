@@ -8,11 +8,11 @@ Kepler and TESS satellites. In practice, transit light curve data comes in the f
 typically taken once every few minutes over several hours or days. For this project, I created 20,000 synthetic light curves, and trained a neural net
 to pick out which ones have transits in them.
 
-The code contains the framework to generate new data. If you would like to use the existing data I have included in this repo, you do not need to run
+The code contains the framework to generate new data. If you would like to use existing data, you do not need to run
 the first two cells. Instead, simply run the cell that loads lightcurves.txt and true_lightcurves.txt. If you WOULD like to create your own data,
 you can run the first cell. If you would like to adjust the amount of data or the planet generation parameters, you can do so by modifying a_max, a_min,
 N_transits, etc in this cell.
 
-The model has a set random seed so that the same result can be produced each time, given the same input data. With the pre-uploaded data, the model
-achieves 99% accuracy. By default has 5 layers: an input layer, 3 dense layers with a reLU activation, and an output with a sigmoid activation. the
+The model has a set random seed so that the same result can be produced each time, given the same input data. With the pre-set parameter ranges, the model
+achieves ~99% accuracy. By default has 5 layers: an input layer, 3 dense layers with a reLU activation, and an output with a sigmoid activation. the
 user can adjust these or modify the model in the cell commented #create model.
